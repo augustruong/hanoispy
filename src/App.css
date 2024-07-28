@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@font-face { 
+  font-family: 'Determination';
+  src: url('/public/font/SVN-DeterminationSans.otf');
 }
 
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  word-break: break-all;
+  font-family: 'Determination';
+}
+html {
+  scroll-behavior: smooth; 
+}
+.App, .MapContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.MapContainer {
+  overflow: hidden;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+button {
+  padding: 14px 64px;
+  border-radius: 10px;
+  border: 1px solid var(--color-black);
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.title {
+  font-size: 64px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hoguom {
+  background: url('/public/hoguom.png');
+  width: 3910px;
+  height: 1166px;
+}
+.hanoimoi {
+  background: url('/public/hanoimoi.png');
+  width: 2785px;
+  height: 1433px;
+}
+.vuonhoalythaito {
+  background: url('/public/vuonhoalythaito.png');
+  width: 1313px;
+  height: 1954px;
+}
+
+.count {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 48px;
+  color: #fff;
+  z-index: 10;
 }

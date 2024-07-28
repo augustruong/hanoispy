@@ -1,0 +1,25 @@
+.PostCardWrapper {
+    border: 1px solid var(--color-black);
+    border-radius: 20px;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+    align-items: center;
+    background-color: var(--color-off-white);
+}
+
+.PostCardWrapper .thumbnail, .PostCardWrapper .thumbnail img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.PostCardWrapper .thumbnail img{
+    border: 1px solid var(--color-black);
+}
+
+.PostCardWrapper .ButtonWrapper {
+    display: flex;
+    gap: var(--space-l);
+}
