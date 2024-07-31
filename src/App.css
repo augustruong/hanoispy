@@ -62,9 +62,9 @@ button {
 }
 
 .hoguom {
-  background: url('/public/hoguom.png');
-  width: 3910px;
-  height: 1166px;
+  background: url('/public/maps/hoguom.png');
+  width: 4020px;
+  height: 1080px;
 }
 .hanoimoi {
   background: url('/public/hanoimoi.png');

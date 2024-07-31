@@ -36,11 +36,19 @@ export default function InGamePage() {
         <div className="MapContainer" {...events} ref={ref}>
             <div className='count'>{count}</div>
             <div className={`bg ${id}`}>
-                <Stage width={canvasWidth} height={canvasHeight} options={{ backgroundAlpha: 0, antialias: true }}>
-                    <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={1470} y={400} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                    <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={840} y={930} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                    <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={1860} y={880} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                </Stage>
+                {id === "hoguom" &&
+                    <Stage width={4020} height={1080} options={{ backgroundAlpha: 0, antialias: true }}>
+                        <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={1405} y={290} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
+                        <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={780} y={820} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
+                        <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={1800} y={780} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
+                    </Stage>
+                }
+                {id === "hanoimoi" &&
+                    <Stage width={2785} height={1433} options={{ backgroundAlpha: 0, antialias: true }}>
+                        <Sprite image={bunnyUrl} width={26} height={37} x={1470} y={400} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
+                        <Sprite image={bunnyUrl} width={26} height={37} x={840} y={930} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
+                    </Stage>
+                }
             </div>
         </div>
     )

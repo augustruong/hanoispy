@@ -9,7 +9,7 @@ import './HomePage.css';
 
 export default function HomePage(){
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         document.title = "Hanoi Spy"
 
         Aos.init({duration: 2000});
