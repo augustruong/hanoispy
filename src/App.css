@@ -61,17 +61,17 @@ button {
   left: 0;
 }
 
-.hoguom {
+.bg.hoguom {
   background: url('/public/maps/hoguom.png');
   width: 4020px;
   height: 1080px;
 }
-.hanoimoi {
+.bg.hanoimoi {
   background: url('/public/hanoimoi.png');
   width: 2785px;
   height: 1433px;
 }
-.vuonhoalythaito {
+.bg.vuonhoalythaito {
   background: url('/public/vuonhoalythaito.png');
   width: 1313px;
   height: 1954px;

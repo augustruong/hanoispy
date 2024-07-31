@@ -6,13 +6,17 @@
 
 } */
 
-.GalleryWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
+.ItemWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
-.GalleryWrapper .ItemWrapper {
-    width: 50%;
-    max-width: 768px;
+.ItemWrapper.hoguom {
+    background-color: #72bcc9;
+}
+.ItemWrapper.hanoimoi {
+    background-color: #dad99d;
+}
+.ItemWrapper.vuonhoalythaito {
+    background-color: #bb806d;
 }

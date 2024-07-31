@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactPageScroller from 'react-page-scroller';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import words from '../words';
@@ -16,17 +17,18 @@ export default function HomePage(){
     }, []);
     return(
         <div id="home">
-            <div className="GalleryWrapper">
-                <div className="ItemWrapper" data-aos="slide-up">
+            <ReactPageScroller renderAllPagesOnFirstRender={true} >
+                <section className="ItemWrapper hoguom">
                     <PostCard mapId='hoguom' title={words.mapTitle.hoguom} imgUrl={`/thumbnail/hoguom.png`} />
-                </div>
-                <div className="ItemWrapper" data-aos="slide-up" >
+                </section>
+                <section className="ItemWrapper hanoimoi" >
                     <PostCard mapId='hanoimoi' title={words.mapTitle.hanoimoi} imgUrl={`/thumbnail/hanoimoi.png`} />
-                </div>
-                <div className="ItemWrapper" data-aos="slide-up" >
+                </section>
+                <section className="ItemWrapper vuonhoalythaito" >
                     <PostCard mapId='vuonhoalythaito' title={words.mapTitle.vuonhoalythaito} imgUrl={`/thumbnail/vuonhoalythaito.png`} />
-                </div>
-            </div>
+                </section>
+
+            </ReactPageScroller>
         </div>
     )
 }
