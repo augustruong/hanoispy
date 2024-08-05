@@ -79,9 +79,15 @@ button {
 
 .count {
   position: fixed;
-  top: 10px;
+  top: 20px;
   left: 20px;
-  font-size: 48px;
+  font-size: 24px;
   color: #fff;
   z-index: 10;
+  background: #FF7A59;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
 }
