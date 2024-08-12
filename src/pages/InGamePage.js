@@ -5,13 +5,13 @@ import '@pixi/events';
 import { TextStyle } from 'pixi.js';
 import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
+import { objectInfo } from '../utils/hoguom_coordinate'; 
 import words from '../words';
 
 export default function InGamePage() {
     const [showManual, setShowManual] = useState(false)
     const bunnyUrl = 'https://pixijs.io/pixi-react/img/bunny.png';
     const [count,setCount] = useState(0)
-
     const {id} = useParams();
 
     //draggable
@@ -25,8 +25,8 @@ export default function InGamePage() {
     //get canvas size
     const [canvasHeight, setHeight] = useState(1080);
     const [canvasWidth, setWidth] = useState(4020);
-    const [row, setRow] = useState(1405);
-    const [col, setCol] = useState(290);
+    const [objectWrapper, setObjectWrapper] = useState(objectInfo[0]);
+    const [visited, setVisited] = useState([0])
     const div = useCallback(node => {
         if (node !== null) {
         setHeight(node.getBoundingClientRect().height);
@@ -34,23 +34,43 @@ export default function InGamePage() {
         }
     }, []);
 
+
+    const updateObject = () => {
+        if (visited.length === 6) {
+            console.log('finish');
+        } else {
+            setCount(count + 1); 
+            let random = (Math.random() * 5).toFixed();
+            random = Number(random);
+            
+            while (visited.length > 0 && visited.includes(random)) {
+                random = (Math.random() * 5).toFixed();
+                random = Number(random);
+            }
+            
+            visited.push(random);
+            setVisited(visited);
+            console.log('Debugging', visited);
+            
+            setObjectWrapper(objectInfo[random]);
+        }   
+    };
+
     return(
         <div className="MapContainer" {...events} ref={ref}>
             {/* <img src={require()}/> */}
             <div className={`bg ${id}`}>
                 <div className='count'>{count}</div>
+                <img src={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} style={{position: 'fixed', top: 0, left: 0 }}/>
                 {id === "hoguom" &&
                     <Stage width={canvasWidth} height={canvasHeight} options={{ backgroundAlpha: 0, antialias: true }}>
-                        <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={row} y={col} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1); setRow(780); setCol(820) }}/>
-                        {/* <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={780} y={820} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                        <Sprite image={process.env.PUBLIC_URL + `/bunny.png`} width={26} height={37} x={1800} y={780} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/> */}
+                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"pointer"} pointerdown={() => {updateObject()}}/>
                     </Stage>
                 }
                 {id === "hanoimoi" &&
                     <Stage width={2785} height={1433} options={{ backgroundAlpha: 0, antialias: true }}>
-                        <Sprite image={bunnyUrl} width={26} height={37} x={1470} y={400} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                        <Sprite image={bunnyUrl} width={26} height={37} x={840} y={930} interactive={true} cursor={"pointer"} pointerdown={() => {setCount(count + 1) }}/>
-                    </Stage>
+                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"pointer"} pointerdown={() => {updateObject()}}/>
+                        </Stage>
                 }
             </div>
         </div>
