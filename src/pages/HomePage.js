@@ -27,7 +27,6 @@ export default function HomePage(){
                 <section className="ItemWrapper vuonhoalythaito" >
                     <PostCard mapId='vuonhoalythaito' title={words.mapTitle.vuonhoalythaito} imgUrl={`/thumbnail/vuonhoalythaito.png`} />
                 </section>
-
             </ReactPageScroller>
         </div>
     )

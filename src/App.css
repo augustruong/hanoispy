@@ -67,14 +67,14 @@ button {
   height: 1080px;
 }
 .bg.hanoimoi {
-  background: url('/public/hanoimoi.png');
-  width: 2785px;
-  height: 1433px;
+  background: url('/public/maps/hanoimoi.png');
+  width: 2680px;
+  height: 1432px;
 }
 .bg.vuonhoalythaito {
-  background: url('/public/vuonhoalythaito.png');
-  width: 1313px;
-  height: 1954px;
+  background: url('/public/maps/vuonhoalythaito.png');
+  width: 1800px;
+  height: 2000px;
 }
 
 .count {
