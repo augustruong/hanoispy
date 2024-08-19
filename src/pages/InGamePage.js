@@ -4,14 +4,17 @@ import { Stage, Container, Sprite, Text } from '@pixi/react';
 import '@pixi/events';
 import { TextStyle } from 'pixi.js';
 import { useDraggable } from "react-use-draggable-scroll";
-import { objectInfo } from '../utils/hoguom_coordinate'; 
+import { MapObject } from '../utils/hoguom_coordinate'; 
+import '../utils/cat_sprite.css';
 import words from '../words';
+
 
 export default function InGamePage() {
     const [showManual, setShowManual] = useState(false)
     const bunnyUrl = 'https://pixijs.io/pixi-react/img/bunny.png';
     const [count,setCount] = useState(0)
     const {id} = useParams();
+    const objectInMap = MapObject[id];
 
     //draggable
     const ref = useRef();
@@ -26,7 +29,7 @@ export default function InGamePage() {
     const [canvasWidth, setWidth] = useState(window.innerWidth);
 
     // update object
-    const [objectWrapper, setObjectWrapper] = useState(objectInfo.hoguom[0]);
+    const [objectWrapper, setObjectWrapper] = useState(objectInMap[0]);
     const [visited, setVisited] = useState([0])
     const updateObject = () => {
         if (visited.length === 30) {
@@ -43,57 +46,27 @@ export default function InGamePage() {
             
             visited.push(random);
             setVisited(visited);
-            console.log('Debugging', visited);
-            
-            setObjectWrapper(objectInfo.hoguom[random]);
-            console.log(objectInfo.hoguom[random])
-        }   
-        
+
+            setObjectWrapper(objectInMap[random]);
+            document.getElementById('goal').className = `cat${random}`
+        }       
     };
-    console.log(objectWrapper.objectCol)
 
     return(
         <div className="MapContainer" {...events} ref={ref}>
             <div className={`bg ${id}`} >
-                <div className='count'>{count}</div>
+                <div className='count'>
+                    {count}
+                    <div id='goal' class="cat1"></div>
+                </div>
                 {id === "hoguom" &&
-                    <Stage width={4020} height={1080} options={{ backgroundAlpha: 0, antialias: true }}>
+                    <Stage width={4020} height={1080} options={{ backgroundAlpha: 0, antialias: true }}>                        
                         <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"pointer"} pointerdown={() => {updateObject()}}/>
                     </Stage>
                 }
                 {id === "hanoimoi" &&
                     <Stage width={2680} height={1432} options={{ backgroundAlpha: 0, antialias: true }}>
-                        {/* <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"pointer"} pointerdown={() => {updateObject()}}/> */}
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={60} y={1054} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={56} height={40} x={222} y={1198} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={30} height={64} x={412} y={1240} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={556} y={980} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={40} x={758} y={1030} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={34} height={38} x={954} y={1034} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={1038} y={1146} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={56} height={40} x={1192} y={1176} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={30} height={64} x={1322} y={1104} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={30} height={64} x={1624} y={1132} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={26} x={1662} y={1046} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={56} height={40} x={1838} y={1036} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={2078} y={1034} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={2252} y={1044} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={30} height={64} x={2602} y={884} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={30} height={64} x={2360} y={598} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={2188} y={740} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={26} x={2188} y={684} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={26} x={2072} y={534} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={2048} y={624} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={1854} y={588} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={1858} y={726} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={56} height={40} x={1484} y={830} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={766} y={740} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={26} x={454} y={742} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={370} y={654} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={56} height={40} x={530} y={632} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={36} height={38} x={786} y={574} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={682} y={184} />
-                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={54} height={36} x={1944} y={178} />
+                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_red.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"pointer"} pointerdown={() => {updateObject()}}/>
                     </Stage>
                 }
                 {id === "vuonhoalythaito" &&
