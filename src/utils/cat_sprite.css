@@ -1,182 +1,179 @@
-.cat1 {
-    background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -35px -40px;
-    width: 85px;
-	height: 95px;
+.cat0 {
+    background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -21px -24px;
+	width: 51px;
+	height: 57px;
 }
 
+.cat1 {
+    background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -135px;
+	width: 81px;
+	height: 39px;
+}
 
 .cat2 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -225px;
-	width: 135px;
-	height: 65px;
+    background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -231px;
+	width: 81px;
+	height: 39px;
 }
 
 .cat3 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -385px;
-	width: 135px;
-	height: 65px;
+    background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -327px;
+	width: 81px;
+	height: 39px;
 }
 
 .cat4 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -545px;
-	width: 135px;
-	height: 65px;
+    background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -6px -405px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat5 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -10px -675px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -6px -501px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat6 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -10px -835px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -609px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat7 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -1015px;
-	width: 135px;
-	height: 90px;
-
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -27px -672px;
+	width: 45px;
+	height: 96px;
 }
 
 .cat8 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -45px -1120px;
-	width: 75px;
-	height: 160px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -786px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat9 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -1310px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -882px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat10 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -1470px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -24px -960px;
+	width: 45px;
+	height: 96px;
 }
 
 .cat11 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -40px -1600px;
-	width: 75px;
-	height: 160px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -24px -1056px;
+	width: 45px;
+	height: 96px;
 }
 
 .cat12 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat no-repeat -40px -1760px;
-	width: 75px;
-	height: 160px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -1182px;
+	width: 81px;
+	height: 39px;
 }
 
 .cat13 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -1970px;
-	width: 135px;
-	height: 65px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -6px -1269px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat14 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -10px -2115px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -1362px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat15 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -2270px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -1461px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat16 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -2435px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -1557px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat17 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -2595px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -6px -1650px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat18 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -10px -2750px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -27px -1728px;
+	width: 45px;
+	height: 96px;
 }
 
 .cat19 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -45px -2880px;
-	width: 75px;
-	height: 160px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -6px -1845px;
+	width: 84px;
+	height: 60px;
 }
 
 .cat20 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -10px -3075px;
-	width: 140px;
-	height: 100px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -24px -1920px;
+	width: 45px;
+	height: 96px;
 }
 
 .cat21 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -40px -3200px;
-	width: 75px;
-	height: 160px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -2037px;
+	width: 51px;
+	height: 57px;
 }
 
 .cat22 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -3395px;
-	width: 85px;
-	height: 95px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -2130px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat23 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -3550px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -18px -2226px;
+	width: 54px;
+	height: 63px;
 }
 
 .cat24 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -30px -3710px;
-	width: 90px;
-	height: 105px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2337px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat25 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -3895px;
-	width: 135px;
-	height: 90px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2433px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat26 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -4055px;
-	width: 135px;
-	height: 90px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2529px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat27 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -4055px;
-	width: 135px;
-	height: 90px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2625px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat28 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -4375px;
-	width: 135px;
-	height: 90px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2721px;
+	width: 81px;
+	height: 54px;
 }
 
 .cat29 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -4535px;
-	width: 135px;
-	height: 90px;
+	background: url('../../public/sprites/Cat-Sprite-Sheet-x3.png') no-repeat -9px -2817px;
+	width: 81px;
+	height: 54px;
 }
-
-.cat30 {
-	background: url('../../public/sprites/Cat-Sprite-Sheet.png') no-repeat -15px -4695px;
-	width: 135px;
-	height: 90px;
-}
-

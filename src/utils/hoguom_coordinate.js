@@ -1,344 +1,99 @@
 export const MapObject = {
     "hoguom": [
-        {   objectWidth: 24,
-            objectHeight: 38,
-            objectRow: 1406,
-            objectCol: 292
-        },
-        {   objectWidth: 54,
-            objectHeight: 26,
-            objectRow: 762,
-            objectCol: 832
-        },
-        {   objectWidth: 42,
-            objectHeight: 26,
-            objectRow: 1786,
-            objectCol: 782
-        },
-        {   objectWidth: 54,
-            objectHeight: 40,
-            objectRow: 412,
-            objectCol: 228
-        },
-        {   objectWidth: 54,
-            objectHeight: 40,
-            objectRow: 656,
-            objectCol: 302
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 1842,
-            objectCol: 216
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 2070,
-            objectCol: 230
-        },
-        {   objectWidth: 54,
-            objectHeight: 26,
-            objectRow: 2642,
-            objectCol: 322
-        },
-        {   objectWidth: 30,
-            objectHeight: 64,
-            objectRow: 2620,
-            objectCol: 356
-        },
-        {   objectWidth: 56,
-            objectHeight: 36,
-            objectRow: 2852,
-            objectCol: 314
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 3118,
-            objectCol: 424
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 3288,
-            objectCol: 300
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 3628,
-            objectCol: 296
-        },
-        {   objectWidth: 30,
-            objectHeight: 64,
-            objectRow: 3960,
-            objectCol: 566
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 3934,
-            objectCol: 660
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 3402,
-            objectCol: 908
-        },
-        {   objectWidth: 52,
-            objectHeight: 34,
-            objectRow: 3328,
-            objectCol: 752
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 3140,
-            objectCol: 832
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 3118,
-            objectCol: 742
-        },
-        {   objectWidth: 30,
-            objectHeight: 64,
-            objectRow: 2930,
-            objectCol: 666
-        },
-        {   objectWidth: 54,
-            objectHeight: 26,
-            objectRow: 2572,
-            objectCol: 842
-        },
-        {   objectWidth: 54,
-            objectHeight: 40,
-            objectRow: 2588,
-            objectCol: 908
-        },
-        {   objectWidth: 34,
-            objectHeight: 38,
-            objectRow: 2408,
-            objectCol: 902
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 2286,
-            objectCol: 850
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 1862,
-            objectCol: 852
-        },
-        {   objectWidth: 36,
-            objectHeight: 38,
-            objectRow: 1440,
-            objectCol: 866
-        },
-        {   objectWidth: 30,
-            objectHeight: 64,
-            objectRow: 926,
-            objectCol: 756
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 250,
-            objectCol: 914
-        },
-        {   objectWidth: 30,
-            objectHeight: 64,
-            objectRow: 50,
-            objectCol: 698
-        },
-        {   objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 1326,
-            objectCol: 924
-        }
+        {objectWidth:24, objectHeight:38, objectRow:260, objectCol:292},
+        {objectWidth:54, objectHeight:26, objectRow:976, objectCol:842}, 
+        {objectWidth:42, objectHeight:26, objectRow:640, objectCol:782},
+        {objectWidth:54, objectHeight:26, objectRow:1426, objectCol:842},
+        {objectWidth:56, objectHeight:40, objectRow:1994, objectCol:832},
+        {objectWidth:56, objectHeight:40, objectRow:1972, objectCol:424}, 
+        {objectWidth:54, objectHeight:36, objectRow:1706, objectCol:314},
+        {objectWidth:30, objectHeight:64, objectRow:2092, objectCol:350}, 
+        {objectWidth:34, objectHeight:42, objectRow:1914, objectCol:304},
+        {objectWidth:56, objectHeight:40, objectRow:2256, objectCol:908},
+        {objectWidth:30, objectHeight:64, objectRow:1784, objectCol:666},
+        {objectWidth:30, objectHeight:64, objectRow:1474, objectCol:356},
+        {objectWidth:54, objectHeight:26, objectRow:1496, objectCol:322},
+        {objectWidth:56, objectHeight:40, objectRow:1442, objectCol:908}, 
+        {objectWidth:34, objectHeight:38, objectRow:1228, objectCol:888}, 
+        {objectWidth:36, objectHeight:38, objectRow:716, objectCol:852}, 
+        {objectWidth:36, objectHeight:38, objectRow:294, objectCol:866},
+        {objectWidth:56, objectHeight:40, objectRow:180, objectCol:924},
+        {objectWidth:30, objectHeight:64, objectRow:800, objectCol:822}, 
+        {objectWidth:56, objectHeight:40, objectRow:1812, objectCol:908},
+        {objectWidth:30, objectHeight:64, objectRow:1930, objectCol:826}, 
+        {objectWidth:34, objectHeight:38, objectRow:1326, objectCol:852}, 
+        {objectWidth:36, objectHeight:38, objectRow:1972, objectCol:742},
+        {objectWidth:36, objectHeight:38, objectRow:696, objectCol:216},
+        {objectWidth:54, objectHeight:36, objectRow:1618, objectCol:450},
+        {objectWidth:54, objectHeight:40, objectRow:1100, objectCol:304},
+        {objectWidth:54, objectHeight:36, objectRow:2142, objectCol:302},
+        {objectWidth:54, objectHeight:36, objectRow:2070, objectCol:454}, 
+        {objectWidth:52, objectHeight:26, objectRow:2182, objectCol:752}, 
+        {objectWidth:54, objectHeight:40, objectRow:924, objectCol:230}
     ],
     "hanoimoi": [
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 60,
-            objectCol: 1054
-        },
-        {   
-            objectWidth: 56, 
-            objectHeight: 40,
-            objectRow: 222,
-            objectCol: 1198
-        },
-        {   
-            objectWidth: 30, 
-            objectHeight: 64,
-            objectRow: 412,
-            objectCol: 1240
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 556,
-            objectCol: 980
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 40,
-            objectRow: 758,
-            objectCol: 1030
-        },
-        {   
-            objectWidth: 34, 
-            objectHeight: 38,
-            objectRow: 954,
-            objectCol: 1034
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 1038,
-            objectCol: 1146
-        },
-        {   
-            objectWidth: 56, 
-            objectHeight: 40,
-            objectRow: 1192,
-            objectCol: 1176
-        },
-        {   
-            objectWidth: 30, 
-            objectHeight: 64,
-            objectRow: 1322,
-            objectCol: 1104
-        },
-        {   
-            objectWidth: 30, 
-            objectHeight: 64,
-            objectRow: 1624,
-            objectCol: 1132
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 26,
-            objectRow: 1662,
-            objectCol: 1046
-        },
-        {   
-            objectWidth: 56, 
-            objectHeight: 40,
-            objectRow: 1838,
-            objectCol: 1036
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 2078,
-            objectCol: 1034
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 2252,
-            objectCol: 1044
-        },
-        {   
-            objectWidth: 30, 
-            objectHeight: 64,
-            objectRow: 2602,
-            objectCol: 884
-        },
-        {   
-            objectWidth: 30, 
-            objectHeight: 64,
-            objectRow: 2360,
-            objectCol: 598
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 2188,
-            objectCol: 740
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 26,
-            objectRow: 2188,
-            objectCol: 684
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 26,
-            objectRow: 2072,
-            objectCol: 534
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 2048,
-            objectCol: 624
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 38,
-            objectRow: 1854,
-            objectCol: 588
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 1858,
-            objectCol: 726
-        },
-        {   
-            objectWidth: 56, 
-            objectHeight: 40,
-            objectRow: 1484,
-            objectCol: 830
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 766,
-            objectCol: 740
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 26,
-            objectRow: 454,
-            objectCol: 742
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 370,
-            objectCol: 654
-        },
-        {   
-            objectWidth: 56, 
-            objectHeight: 40,
-            objectRow: 530,
-            objectCol: 632
-        },
-        {   
-            objectWidth: 36, 
-            objectHeight: 38,
-            objectRow: 786,
-            objectCol: 574
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 682,
-            objectCol: 184
-        },
-        {   
-            objectWidth: 54, 
-            objectHeight: 36,
-            objectRow: 1944,
-            objectCol: 178
-        }
+        { objectWidth: 34, objectHeight: 38, objectRow: 954, objectCol: 1034 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 2072, objectCol: 534 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 2188, objectCol: 684 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 454, objectCol: 742 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 530, objectCol: 632 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 222, objectCol: 1198 },
+        { objectWidth: 54, objectHeight: 38, objectRow: 1854, objectCol: 588 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 1624, objectCol: 1132 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 370, objectCol: 654 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1838, objectCol: 1036 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 1322, objectCol: 1104 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 2602, objectCol: 884 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 1662, objectCol: 1046 },
+        { objectWidth: 54, objectHeight: 40, objectRow: 758, objectCol: 1030 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 786, objectCol: 574 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1858, objectCol: 726 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 556, objectCol: 980 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1484, objectCol: 830 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 2360, objectCol: 598 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1192, objectCol: 1176 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 412, objectCol: 1240 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1038, objectCol: 1146 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 2078, objectCol: 1034 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 2048, objectCol: 624 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 60, objectCol: 1054 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 766, objectCol: 740 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 2188, objectCol: 740 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1944, objectCol: 178 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 2252, objectCol: 1044 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 682, objectCol: 184 }
     ],
     "vuonhoalythaito": [
-        {   
-            objectWidth: 56,
-            objectHeight: 40,
-            objectRow: 1326,
-            objectCol: 924
-        }
+        { objectWidth: 34, objectHeight: 38, objectRow: 1188, objectCol: 1040 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 668, objectCol: 46 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 976, objectCol: 766 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 674, objectCol: 364 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 298, objectCol: 288 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1252, objectCol: 208 },
+        { objectWidth: 54, objectHeight: 38, objectRow: 1554, objectCol: 562 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 702, objectCol: 422 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 876, objectCol: 1082 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1336, objectCol: 812 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 578, objectCol: 1128 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 1556, objectCol: 604 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 1370, objectCol: 220 },
+        { objectWidth: 54, objectHeight: 40, objectRow: 402, objectCol: 670 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1044, objectCol: 344 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 648, objectCol: 826 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 660, objectCol: 190 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 662, objectCol: 910 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 1292, objectCol: 614 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 466, objectCol: 600 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 250, objectCol: 654 },
+        { objectWidth: 20, objectHeight: 30, objectRow: 1002, objectCol: 676 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 690, objectCol: 1036 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1158, objectCol: 808 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1040, objectCol: 1050 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 664, objectCol: 1100 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 336, objectCol: 898 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1554, objectCol: 312 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 676, objectCol: 302 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1164, objectCol: 308 }
     ]
+    
 }

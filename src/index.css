@@ -1,14 +1,18 @@
 :root {
   --color-black: #202020;
-  --color-white: #F0F0F0;
+  --color-white: #FFFFFF;
+  --color-white-hover: #FAFAFA;
   --color-off-white: #EDEDED;
+  --color-green: #2E9D46;
+  --color-yellow: #EBFF8A;
+  --color-yellow-hover: #E1F483;
 
   /* Space - Sizes */
   --space-none: 0;
   --space-xs: 4px;
   --space-s: 8px;
   --space-base: 16px;
-  --space-m: 24px;
+  --space-m: 28px;
   --space-l: 32px;
   --space-xl: 44px;
   --space-xxl: 52px;
@@ -19,6 +23,12 @@
   --mb-footer-mb: var(--space-xxl);
 
   --max-width: 1920px;
+
+  --font-s: 16px;
+  --font-m: 18px;
+  --font-l: 36px;
+  --font-xl: 48px;
+  --font-xxl: 64px;
 }
 body {
   margin: 0;
@@ -33,3 +43,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.w-full {
+  width: 100vw;
+}
+
+.h-screen {
+  min-height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+.y.proximity-scroll-snapping {
+  scroll-snap-type: y proximity;
+} */
