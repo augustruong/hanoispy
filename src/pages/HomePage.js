@@ -16,6 +16,7 @@ import Third from "../components/Third";
 export default function HomePage(){
     const [isLoading, setIsLoading] = useState(true);
     const [currentBg, setCurrentBg] = useState('#72bcc9')
+    const audio = new Audio(process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3');
     let appRef = useRef(null);
 
     useEffect(() => {
@@ -27,6 +28,7 @@ export default function HomePage(){
 
         // window.scrollTo(0, 0);
         document.title = "Hanoi Spy"
+        audio.play();
 
         gsap.to(appRef.current, {
             duration: 1,
@@ -37,30 +39,24 @@ export default function HomePage(){
 
 
     return(
-        // <div id="home" className="home" style={{backgroundColor: `${bgColor}`}}>
-        //     <ReactPageScroller renderAllPagesOnFirstRender={true}  >
-        //         <section className="ItemWrapper hoguom" >
-        //             <PostCard mapId='hoguom' title={words.mapTitle.hoguom} imgUrl={`/thumbnail/hoguom.png`} infoBtnColor={"white"} infoContent={words.info.hoguom} />
-        //         </section>
-        //         <section className="ItemWrapper hanoimoi" >
-        //             <PostCard mapId='hanoimoi' title={words.mapTitle.hanoimoi} imgUrl={`/thumbnail/hanoimoi.png`} infoBtnColor={"black"} infoContent={words.info.hanoimoi}/>
-        //         </section>
-        //         <section className="ItemWrapper vuonhoalythaito" >
-        //             <PostCard mapId='vuonhoalythaito' title={words.mapTitle.vuonhoalythaito} imgUrl={`/thumbnail/vuonhoalythaito.png`} infoBtnColor={"white"} infoContent={words.info.vuonhoalythaito} />
-        //         </section>
-        //     </ReactPageScroller>
-        // </div>
         <AnimationContext.Provider id="home" value={{ setCurrentBg }}>
             {isLoading ? (
                 <div className="loading">
                     <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
                 </div>
             ) : (
+            <>
             <div ref={appRef} className="App y mandatory-scroll-snapping" dir="ltr">
                 <First />
                 <Second />
                 <Third />
-            </div>)}
+            </div>
+            <audio loop autoplay="true"> 
+                <source src={process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3'} type="audio/mpeg"/>
+            </audio>
+            </>
+            
+        )}
         </AnimationContext.Provider>
     )
 }

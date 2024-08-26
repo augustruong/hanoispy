@@ -6,6 +6,9 @@
   --color-green: #2E9D46;
   --color-yellow: #EBFF8A;
   --color-yellow-hover: #E1F483;
+  --color-red: #ac3232;
+  --color-orange: #FF7A59;
+
 
   /* Space - Sizes */
   --space-none: 0;
@@ -26,7 +29,7 @@
 
   --font-s: 16px;
   --font-m: 18px;
-  --font-l: 36px;
+  --font-l: 34px;
   --font-xl: 48px;
   --font-xxl: 64px;
 }

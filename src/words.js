@@ -1,7 +1,8 @@
 const words = {
     routes: {
         home: "/",
-        ingame: "/:id"
+        challenge: "challenge/:id",
+        freeplay: "freeplay/:id"
     },
     button: {
         challenge: "Challenge",

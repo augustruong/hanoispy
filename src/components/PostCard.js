@@ -18,8 +18,10 @@ export default function PostCard(props) {
                 <div className='img' style={{ background: `url('/thumbnail/${props.mapId}.png')`, backgroundSize:'cover', backgroundPosition:'center' }}></div>
             </div>
             <div className='ButtonWrapper'>
-                <button className='challenge white'>{words.button.challenge}</button>
-                <NavLink to={`/${props.mapId}`}>
+                <NavLink to={`challenge/${props.mapId}`}>
+                    <button className='challenge white'>{words.button.challenge}</button>
+                </NavLink>
+                <NavLink to={`freeplay/${props.mapId}`}>
                     <button className='freeplay yellow'>{words.button.freeplay}</button>
                 </NavLink>
             </div>

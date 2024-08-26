@@ -11,7 +11,8 @@ function App() {
   return (
     <Routes>
       <Route path={words.routes.home} element={<HomePage />} />
-      <Route path={words.routes.ingame} element={<InGamePage />} />
+      <Route path={words.routes.freeplay} element={<InGamePage freeplay/>} />
+      <Route path={words.routes.challenge} element={<InGamePage challenge/>} />
     </Routes>
   );
 }
