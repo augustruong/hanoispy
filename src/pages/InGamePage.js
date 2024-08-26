@@ -34,9 +34,11 @@ export default function InGamePage() {
     });
 
     // update object
+    const audio = new Audio(process.env.PUBLIC_URL + '/audio/cat-meow-sound.mp3');
     const [objectWrapper, setObjectWrapper] = useState(objectInMap[0]);
     const [visited, setVisited] = useState([0])
     const updateObject = () => {
+        audio.play();
         if (visited.length === 30) {
             setShowEndGameModal(true);
             console.log('finish');
