@@ -52,7 +52,9 @@ export default function HomePage(){
         // </div>
         <AnimationContext.Provider id="home" value={{ setCurrentBg }}>
             {isLoading ? (
-                <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
+                <div className="loading">
+                    <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
+                </div>
             ) : (
             <div ref={appRef} className="App y mandatory-scroll-snapping" dir="ltr">
                 <First />
