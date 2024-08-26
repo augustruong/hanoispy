@@ -14,10 +14,17 @@ import Second from "../components/Second";
 import Third from "../components/Third";
 
 export default function HomePage(){
+    const [isLoading, setIsLoading] = useState(true);
     const [currentBg, setCurrentBg] = useState('#72bcc9')
     let appRef = useRef(null);
 
     useEffect(() => {
+        // Simulate data loading
+        setTimeout(() => {
+            console.log("Currently loading");
+            setIsLoading(false);
+        }, 3000);
+
         // window.scrollTo(0, 0);
         document.title = "Hanoi Spy"
 
@@ -44,11 +51,14 @@ export default function HomePage(){
         //     </ReactPageScroller>
         // </div>
         <AnimationContext.Provider id="home" value={{ setCurrentBg }}>
+            {isLoading ? (
+                <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
+            ) : (
             <div ref={appRef} className="App y mandatory-scroll-snapping" dir="ltr">
                 <First />
                 <Second />
                 <Third />
-            </div>
+            </div>)}
         </AnimationContext.Provider>
     )
 }
