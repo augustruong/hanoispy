@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/hanoispy/static/css/main.70b83448.css",
+    "main.js": "/hanoispy/static/js/main.4d92f525.js",
+    "static/js/453.2a82e7ac.chunk.js": "/hanoispy/static/js/453.2a82e7ac.chunk.js",
+    "static/media/hanoimoi.png": "/hanoispy/static/media/hanoimoi.a514ff5193d38fe68fbc.png",
+    "static/media/hoguom-mini.png": "/hanoispy/static/media/hoguom-mini.0bcf72c43f76454f3538.png",
+    "static/media/nhatuhoalo.png": "/hanoispy/static/media/nhatuhoalo.953522cea243a00bdb41.png",
+    "static/media/vuonhoalythaito-mini.png": "/hanoispy/static/media/vuonhoalythaito-mini.d8ab16ac6bd41be2466f.png",
+    "static/media/SVN-DeterminationSans.otf": "/hanoispy/static/media/SVN-DeterminationSans.e9c2df83a008e15c629e.otf",
+    "static/media/Cat-Sprite-Sheet-x3.png": "/hanoispy/static/media/Cat-Sprite-Sheet-x3.918b09057778859bd5f5.png",
+    "static/media/i-challenge.svg": "/hanoispy/static/media/i-challenge.f63ea5137908caa77970.svg",
+    "static/media/i-freeplay.svg": "/hanoispy/static/media/i-freeplay.26f4deac796f63062223.svg",
+    "static/media/i-replay.svg": "/hanoispy/static/media/i-replay.ba058879b5772a07ae62.svg",
+    "static/media/i-out.svg": "/hanoispy/static/media/i-out.49349e8eb098d1ff270c.svg",
+    "static/media/i-question-circle-white.svg": "/hanoispy/static/media/i-question-circle-white.cb6e50342a353b7ae0e7.svg",
+    "static/media/i-information-circle-white.svg": "/hanoispy/static/media/i-information-circle-white.9c18542b8b2b224dbcca.svg",
+    "index.html": "/hanoispy/index.html",
+    "static/media/i-information-circle-black.svg": "/hanoispy/static/media/i-information-circle-black.d40bf9890a1fdeed654e.svg",
+    "static/media/i-sound-off.svg": "/hanoispy/static/media/i-sound-off.8f24c4a13201eda0f40e.svg",
+    "static/media/i-sound-on.svg": "/hanoispy/static/media/i-sound-on.28efd3f801820404c4fa.svg",
+    "main.70b83448.css.map": "/hanoispy/static/css/main.70b83448.css.map",
+    "main.4d92f525.js.map": "/hanoispy/static/js/main.4d92f525.js.map",
+    "453.2a82e7ac.chunk.js.map": "/hanoispy/static/js/453.2a82e7ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70b83448.css",
+    "static/js/main.4d92f525.js"
+  ]
+}
