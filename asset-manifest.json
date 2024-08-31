@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/hanoispy/static/css/main.2cb8c18f.css",
+    "main.css": "/hanoispy/static/css/main.b4940eb5.css",
     "main.js": "/hanoispy/static/js/main.b7f4e350.js",
     "static/js/453.2a82e7ac.chunk.js": "/hanoispy/static/js/453.2a82e7ac.chunk.js",
-    "static/media/hoguom.png": "/hanoispy/static/media/hoguom.477313abcb6363452e99.png",
-    "static/media/hanoimoi.png": "/hanoispy/static/media/hanoimoi.a514ff5193d38fe68fbc.png",
-    "static/media/hoguom-mini.png": "/hanoispy/static/media/hoguom-mini.0bcf72c43f76454f3538.png",
     "static/media/nhatuhoalo.png": "/hanoispy/static/media/nhatuhoalo.953522cea243a00bdb41.png",
+    "static/media/hoguom.png": "/hanoispy/static/media/hoguom.477313abcb6363452e99.png",
+    "static/media/hanoimoi.png": "/hanoispy/static/media/hanoimoi.51b5c179f1678b3cdd6d.png",
+    "static/media/hoguom-mini.png": "/hanoispy/static/media/hoguom-mini.0bcf72c43f76454f3538.png",
     "static/media/vuonhoalythaito-mini.png": "/hanoispy/static/media/vuonhoalythaito-mini.d8ab16ac6bd41be2466f.png",
+    "static/media/vuonhoalythaito.png": "/hanoispy/static/media/vuonhoalythaito.90e7a8e98102de669457.png",
     "static/media/SVN-DeterminationSans.otf": "/hanoispy/static/media/SVN-DeterminationSans.e9c2df83a008e15c629e.otf",
     "static/media/Cat-Sprite-Sheet-x3.png": "/hanoispy/static/media/Cat-Sprite-Sheet-x3.918b09057778859bd5f5.png",
     "static/media/i-challenge.svg": "/hanoispy/static/media/i-challenge.f63ea5137908caa77970.svg",
@@ -20,12 +21,12 @@
     "static/media/i-information-circle-black.svg": "/hanoispy/static/media/i-information-circle-black.d40bf9890a1fdeed654e.svg",
     "static/media/i-sound-off.svg": "/hanoispy/static/media/i-sound-off.8f24c4a13201eda0f40e.svg",
     "static/media/i-sound-on.svg": "/hanoispy/static/media/i-sound-on.28efd3f801820404c4fa.svg",
-    "main.2cb8c18f.css.map": "/hanoispy/static/css/main.2cb8c18f.css.map",
+    "main.b4940eb5.css.map": "/hanoispy/static/css/main.b4940eb5.css.map",
     "main.b7f4e350.js.map": "/hanoispy/static/js/main.b7f4e350.js.map",
     "453.2a82e7ac.chunk.js.map": "/hanoispy/static/js/453.2a82e7ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cb8c18f.css",
+    "static/css/main.b4940eb5.css",
     "static/js/main.b7f4e350.js"
   ]
 }
