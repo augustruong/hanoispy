@@ -31,7 +31,7 @@ export default function Nhatuhoalo() {
   return (
     <div ref={thisRef} className='h-screen center' >
         <div className="ItemWrapper nhatuhoalo" >
-            <PostCard mapId='nhatuhoalo' title={words.mapTitle.nhatuhoalo} imgUrl={`/thumbnail/nhatuhoalo.png`} infoBtnColor={"white"} infoContent={words.info.vuonhoalythaito} />
+            <PostCard mapId='nhatuhoalo' title={words.mapTitle.nhatuhoalo} imgUrl={`/thumbnail/nhatuhoalo.png`} infoBtnColor={"white"} infoContent={words.info.nhatuhoalo} />
         </div>
     </div>
   )

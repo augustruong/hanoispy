@@ -60,3 +60,21 @@
     background-size: cover;
     background-position: center 
 }
+
+.img.thumbnail.hanoimoi {
+    background-image: url("../../public/thumbnail/hanoimoi.png");
+    background-size: cover;
+    background-position: center 
+}
+
+.img.thumbnail.nhatuhoalo {
+    background-image: url("../../public/thumbnail/nhatuhoalo.png");
+    background-size: cover;
+    background-position: center 
+}
+
+.img.thumbnail.vuonhoalythaito {
+    background-image: url("../../public/thumbnail/vuonhoalythaito.png");
+    background-size: cover;
+    background-position: center 
+}
