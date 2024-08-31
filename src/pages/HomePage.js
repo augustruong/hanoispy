@@ -1,62 +1,72 @@
 import React, { useEffect, useState, useRef } from "react";
-import ReactPageScroller from 'react-page-scroller';
-import Aos from "aos";
-import "aos/dist/aos.css";
-import words from '../words';
-
-import PostCard from "../components/PostCard";
-import './HomePage.css';
-
-import {gsap} from 'gsap/all'
-import AnimationContext from '../contexts/AnimationContext';
-import First from "../components/First";
-import Second from "../components/Second";
-import Third from "../components/Third";
+import Playlist from "./Playlist";
 
 export default function HomePage(){
     const [isLoading, setIsLoading] = useState(true);
-    const [currentBg, setCurrentBg] = useState('#72bcc9')
-    const audio = new Audio(process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3');
-    let appRef = useRef(null);
+    const [showConfirmModal, setShowConfirmModal] = useState(true)
+    const [bgm, setBgm] = useState( new Audio(process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3') )
+
+    const clicked_audio = new Audio(process.env.PUBLIC_URL + '/audio/clicked.mp3');
+    const [sound,setSound] = useState(false)
 
     useEffect(() => {
         // Simulate data loading
         setTimeout(() => {
-            console.log("Currently loading");
             setIsLoading(false);
         }, 3000);
 
-        // window.scrollTo(0, 0);
-        document.title = "Hanoi Spy"
-        audio.play();
-
-        gsap.to(appRef.current, {
-            duration: 1,
-            background: currentBg,
-          })
-
-    }, [currentBg]);
-
+        document.title = "Meo in Hanoi"
+          
+        return () => {
+            bgm.pause();
+        };
+    }, [])
 
     return(
-        <AnimationContext.Provider id="home" value={{ setCurrentBg }}>
-            {isLoading ? (
-                <div className="loading">
-                    <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
-                </div>
-            ) : (
-            <>
-            <div ref={appRef} className="App y mandatory-scroll-snapping" dir="ltr">
-                <First />
-                <Second />
-                <Third />
+        <>
+        {isLoading ? (
+            <div className="loading">
+                <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
             </div>
-            <audio loop autoplay="true"> 
-                <source src={process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3'} type="audio/mpeg"/>
-            </audio>
-            </>
-            
+        ) : (
+        <>
+            <button className={sound ? `sound on` : `sound off`} 
+                    onClick={() => { 
+                        if (!sound) {bgm.play()} else {bgm.pause()}
+                        setSound(!sound); 
+                    }}
+                    title="Bật/Tắt BGM"
+            >
+            </button>
+            <button className='about' title="Web gì đây??"></button>
+            <Playlist/>
+            {showConfirmModal &&
+                <div className='overlay'>
+                    <div className='confirm modal'>
+                        <div className='text-wrapper'>Bạn có muốn để nhạc nền hem?</div>
+                        <div className='gif-wrapper'>
+                            <img src={process.env.PUBLIC_URL + `/gif/cat-listen-to-music.gif`}/>
+                         </div>   
+                        <div className='cta-wrapper'>
+                            <button className='yellow' 
+                                    onClick={() => { 
+                                        clicked_audio.play();  
+                                        setSound(true);
+                                        bgm.play(); 
+                                        setShowConfirmModal(false); 
+                            }}>Cũng được</button>
+                            <button className='white' 
+                                    onClick={() => { 
+                                        clicked_audio.play(); 
+                                        setSound(false); 
+                                        setShowConfirmModal(false) 
+                            }}>Hem</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </>
         )}
-        </AnimationContext.Provider>
+        </>
     )
 }

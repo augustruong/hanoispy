@@ -15,13 +15,21 @@ export default function InGamePage(props) {
     const objectInMap = MapObject[id];
 
     const [isLoading, setIsLoading] = useState(true);
-    const [showManual, setShowManual] = useState(false)
+
+    //Modal
+    const [showManualModal, setShowManualModal] = useState(false)
     const [showEndGameModal, setShowEndGameModal] = useState(false)
     const [showConfirmModal, setShowConfirmModal] = useState(false)
 
-    const bgm = new Audio(process.env.PUBLIC_URL + `/audio/${id}.wav`);
-    const audio = new Audio(process.env.PUBLIC_URL + '/audio/cat-meow-sound.mp3');
+    //Audio
+    const [bgmOn,setBgmOn] = useState(true)
+    const [bgm, setBgm] = useState( new Audio(process.env.PUBLIC_URL + `/audio/${id}.wav`) )
+    const cat_audio = new Audio(process.env.PUBLIC_URL + '/audio/cat-meow-sound.mp3');
+    const clicked_audio = new Audio(process.env.PUBLIC_URL + '/audio/clicked.mp3');
+    const congraz_audio = new Audio(process.env.PUBLIC_URL + '/audio/happy-happy-cat.mp3');
+    const gameover_audio = new Audio(process.env.PUBLIC_URL + '/audio/banana-cat-crying.mp3');
 
+    //Random facts
     const [factNum, setNum] = useState(0);
     const randomNumberInRange = (min, max) => {
         return Math.floor(Math.random()
@@ -33,9 +41,12 @@ export default function InGamePage(props) {
         setTimeout(() => {
             setIsLoading(false);
             bgm.play();
-            if (props.challenge) {clearTimer(getDeadTime());}
-            
+            setShowManualModal(true);
         }, 3000);
+
+        return () => {
+            bgm.pause();
+        };
     }, []);
 
     //draggable
@@ -49,9 +60,11 @@ export default function InGamePage(props) {
     const [objectWrapper, setObjectWrapper] = useState(objectInMap[0]);
     const [visited, setVisited] = useState([0])
     const updateObject = () => {
-        audio.play();
+        cat_audio.play();
         if (visited.length === 30) {
+            setCount(30)
             setShowEndGameModal(true);
+            congraz_audio.play()
             // console.log('finish');
         } else {
             // console.log("debugging", visited);
@@ -86,7 +99,7 @@ export default function InGamePage(props) {
     }
 
     // The state for our timer
-    const [timer, setTimer] = useState("00:00:00");
+    const [timer, setTimer] = useState("03:00");
     const Ref = useRef(null);
     const [alertTimer,setAlertTimer] = useState(false);
 
@@ -95,7 +108,7 @@ export default function InGamePage(props) {
         const seconds = Math.floor((total / 1000) % 60);
         const minutes = Math.floor((total / 1000 / 60) % 60);
         if (minutes === 0 && seconds === 10) setAlertTimer(true)
-        if (minutes === 0 && seconds === 0) setShowEndGameModal(true)
+        if (minutes === 0 && seconds === 0) { setShowConfirmModal(false); setShowEndGameModal(true); gameover_audio.play()}
         return {
             total,
             minutes,
@@ -119,7 +132,6 @@ export default function InGamePage(props) {
     const clearTimer = (e) => {
         // If you adjust it you should also need to adjust the Endtime formula we are about to code next
         setTimer("03:00");
-        
 
         // If you try to remove this line the updating of timer Variable will be after 1000ms or 1sec
         if (Ref.current) clearInterval(Ref.current);
@@ -146,12 +158,12 @@ export default function InGamePage(props) {
                 </div>
             ) : (
             <div className={`bg ${id}`} >
-                <audio loop autoplay="true"> 
+                <audio loop> 
                     <source src={process.env.PUBLIC_URL + `/audio/${id}.wav`}/>
                 </audio>
                 <div className='count'>
                     {count}
-                    <div id='goal'>
+                    <div id='goal' title="Tìm con mèo như này nhé">
                         <div id='cat' class="cat0"></div>
                     </div>
                 </div>
@@ -159,9 +171,18 @@ export default function InGamePage(props) {
                 {!showEndGameModal && 
                     <div>
                         {props.challenge && <div className={alertTimer ? 'timer alert' : 'timer'}>{timer}</div>}
-                        <div className='close' onClick={() => setShowConfirmModal(true)}></div>
+                        <div className='close' title="Thoát game" onClick={() => { clicked_audio.play(); setShowConfirmModal(true)}}></div>
                     </div>
                 }
+
+                <button className={bgmOn ? `sound on` : `sound off`} 
+                        onClick={() => { 
+                            if (!bgmOn) {bgm.play()} else {bgm.pause()}
+                            setBgmOn(!bgmOn); 
+                        }}
+                        title="Bật/Tắt BGM"
+                >
+                </button>
 
                 {id === "hoguom" &&
                     <Stage width={2320} height={1080} options={{ backgroundAlpha: 0, antialias: true }}>                        
@@ -178,33 +199,61 @@ export default function InGamePage(props) {
                         <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_trans.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"default"} pointerdown={() => {updateObject()}}/>
                     </Stage>
                 }
+                {id === "nhatuhoalo" &&
+                    <Stage width={2560} height={960} options={{ backgroundAlpha: 0, antialias: true }}>
+                        <Sprite image={process.env.PUBLIC_URL + `/wrapper/wrapper_trans.png`} width={objectWrapper.objectWidth} height={objectWrapper.objectHeight} x={objectWrapper.objectRow} y={objectWrapper.objectCol} interactive={true} cursor={"default"} pointerdown={() => {updateObject()}}/>
+                    </Stage>
+                }
             </div>)}
-            {showConfirmModal &&
+            {showManualModal &&
                 <div className='overlay'>
-                    <div className='confirm modal'>
-                        <div className='text-wrapper'>Bạn có chắc muốn quit game?</div>
+                    <div className='manual modal'>
+                        <div className='text-wrapper'>
+                            Giữ-thả chuột trái để di chuyển bản đồ.<br/>
+                            Chuột trái để chọn mèo.
+                            Bạn cầm tìm đủ <span className='color-green'>30 chú mèo</span> theo chỉ định.
+                            {props.challenge && 
+                            <div>Bạn có tổng thời gian là <span className='color-orange'>3 phút</span>.</div>
+                            }
+                        </div>
                         <div className='gif-wrapper'>
-                            <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
+                            <img src={process.env.PUBLIC_URL + `/paw-drag.png`}/>
                          </div>   
                         <div className='cta-wrapper'>
-                            <button className='yellow' onClick={() => { setNum(randomNumberInRange(0, 9)); setShowEndGameModal(true); setShowConfirmModal(false) }}>OK</button>
-                            <button className='white' onClick={() => { setShowConfirmModal(false) }}>Không</button>
+                            <button className='yellow' onClick={() => { clicked_audio.play(); setShowManualModal(false); if (props.challenge) {clearTimer(getDeadTime());} }}>OK</button>
+                        </div>
+                    </div>
+                </div>
+            }
+            {showConfirmModal &&
+                <div className='overlay confirm'>
+                    <div className='confirm modal'>
+                        <div className='text-wrapper'>Ơ, bạn hong chơi nữa hở?</div>
+                        <div className='gif-wrapper'>
+                            <img src={process.env.PUBLIC_URL + `/gif/cat-cry.gif`}/>
+                         </div>   
+                        <div className='cta-wrapper'>
+                            <button className='yellow' onClick={() => { clicked_audio.play(); setNum(randomNumberInRange(0, 9)); setShowEndGameModal(true); gameover_audio.play(); setShowConfirmModal(false) }}>Ò</button>
+                            <button className='white' onClick={() => { clicked_audio.play(); setShowConfirmModal(false) }}>Chơi tiếp</button>
                         </div>
                     </div>
                 </div>
             }
             {showEndGameModal &&
-                <div className='overlay'>
+                <div className='overlay endgame'>
                     <div className='endgame modal'>
+                        {count === 30 && <div className='intro'>Yê! Bạn đã tìm đủ 30 mèo ^ ^</div>}
+                        {count < 30 && <div className='intro'>Huhu, bạn chưa tìm đủ 30 mèo rùi T T</div>}
+
                         <div className='top-wrapper'>
                             <div className='score-report-wrapper'>
                                 <div className='label'>Số điểm</div>
                                 <div className='score'>{count}</div>
                             </div>
                             <div className='cta-wrapper'>
-                                <button className='replay yellow' onClick={() => reset()}>Chơi lại</button>
+                                <button className='replay yellow' onClick={() => {clicked_audio.play(); reset()}}>Chơi lại</button>
                                 <Link to={words.routes.home}>
-                                    <button className='out white'>Đổi Map</button>
+                                    <button className='out white' onClick={() => clicked_audio.play()}>Đổi Map</button>
                                 </Link>
                             </div>
                         </div>

@@ -94,6 +94,39 @@ export const MapObject = {
         { objectWidth: 54, objectHeight: 36, objectRow: 1554, objectCol: 312 },
         { objectWidth: 54, objectHeight: 36, objectRow: 676, objectCol: 302 },
         { objectWidth: 54, objectHeight: 36, objectRow: 1164, objectCol: 308 }
+    ],
+    "nhatuhoalo": [
+        { objectWidth: 34, objectHeight: 38, objectRow: 2142, objectCol: 318 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 1096, objectCol: 674 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 2378, objectCol: 722 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 1532, objectCol: 398 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 964, objectCol: 230 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 1538, objectCol: 666 },
+        { objectWidth: 54, objectHeight: 38, objectRow: 700, objectCol: 522 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 1824, objectCol: 706 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 390, objectCol: 318 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 144, objectCol: 768 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 2362, objectCol: 776 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 736, objectCol: 372 },
+        { objectWidth: 54, objectHeight: 26, objectRow: 2214, objectCol: 388 },
+        { objectWidth: 54, objectHeight: 40, objectRow: 2146, objectCol: 750 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 852, objectCol: 640 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1984, objectCol: 712 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 218, objectCol: 730 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 58, objectCol: 736 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 712, objectCol: 706 },
+        { objectWidth: 56, objectHeight: 40, objectRow: 2462, objectCol: 748 },
+        { objectWidth: 30, objectHeight: 64, objectRow: 2336, objectCol: 692 },
+        { objectWidth: 20, objectHeight: 30, objectRow: 582, objectCol: 750 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 988, objectCol: 660 },
+        { objectWidth: 36, objectHeight: 38, objectRow: 1192, objectCol: 382 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 312, objectCol: 784 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 192, objectCol: 388 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1534, objectCol: 242 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 2000, objectCol: 96 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 2316, objectCol: 316 },
+        { objectWidth: 54, objectHeight: 36, objectRow: 1336, objectCol: 242 }
     ]
+    
     
 }

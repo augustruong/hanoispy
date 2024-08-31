@@ -5,7 +5,8 @@ import words from '../words';
 import './PostCard.css'
 
 export default function PostCard(props) {
-    const [showInfo, setShowInfo] = useState(false)
+    const clicked_audio = new Audio(process.env.PUBLIC_URL + '/audio/clicked.mp3');
+
     return(
         <div className='PostCardWrapper'>
             <div className='title'>{props.title}</div>
@@ -19,10 +20,10 @@ export default function PostCard(props) {
             </div>
             <div className='ButtonWrapper'>
                 <NavLink to={`challenge/${props.mapId}`}>
-                    <button className='challenge white'>{words.button.challenge}</button>
+                    <button className='challenge white' onClick={() => clicked_audio.play() }>{words.button.challenge}</button>
                 </NavLink>
                 <NavLink to={`freeplay/${props.mapId}`}>
-                    <button className='freeplay yellow'>{words.button.freeplay}</button>
+                    <button className='freeplay yellow' onClick={() => clicked_audio.play() }>{words.button.freeplay}</button>
                 </NavLink>
             </div>
         </div>
