@@ -16,7 +16,7 @@ export default function PostCard(props) {
                 <div className='info-wrapper overlay'>
                         <p>{props.infoContent}</p>
                 </div>
-                <div className='img' style={{ background: `url('/thumbnail/${props.mapId}.png')`, backgroundSize:'cover', backgroundPosition:'center' }}></div>
+                <div className='img' style={{ backgroundImage: `url("/thumbnail/${props.mapId}.png)"`, backgroundSize:'cover', backgroundPosition:'center' }}></div>
             </div>
             <div className='ButtonWrapper'>
                 <NavLink to={`challenge/${props.mapId}`}>
