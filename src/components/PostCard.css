@@ -54,3 +54,9 @@
 .PostCardWrapper .thumbnail button.info:hover ~ .info-wrapper {
     opacity: 1;
 }
+
+.img.thumbnail.hoguom {
+    background-image: url("../../public/thumbnail/hoguom.png");
+    background-size: cover;
+    background-position: center 
+}
