@@ -4,6 +4,8 @@ import Playlist from "./Playlist";
 export default function HomePage(){
     const [isLoading, setIsLoading] = useState(true);
     const [showConfirmModal, setShowConfirmModal] = useState(true)
+    const [showAboutModal, setShowAboutModal] = useState(false)
+
     const [bgm, setBgm] = useState( new Audio(process.env.PUBLIC_URL + '/audio/super-cute-cats.mp3') )
 
     const clicked_audio = new Audio(process.env.PUBLIC_URL + '/audio/clicked.mp3');
@@ -38,7 +40,7 @@ export default function HomePage(){
                     title="Bật/Tắt BGM"
             >
             </button>
-            <button className='about' title="Web gì đây??"></button>
+            <button className='about' title="Web gì đây??" onClick={() => setShowAboutModal(true)}></button>
             <Playlist/>
             {showConfirmModal &&
                 <div className='overlay'>
@@ -61,6 +63,31 @@ export default function HomePage(){
                                         setSound(false); 
                                         setShowConfirmModal(false) 
                             }}>Hem</button>
+                        </div>
+                    </div>
+                </div>
+            }
+            {showAboutModal &&
+                <div className='overlay'>
+                    <div className='about modal'>
+                        <div className='title-wrapper'>
+                            <div className="logo"></div>
+                            <div className="title">Meo in Hanoi</div>
+                        </div>
+                        <div className='gif-wrapper'>
+                            <img src={process.env.PUBLIC_URL + `/gif/intro.png`}/>
+                         </div>  
+                        <p className='text-wrapper'>
+                            Đây là một web game vô tri.<br/>
+                            Chọn một map bất kì, tìm đủ <span className="color-green">30 chú mèo</span> theo chỉ thị là bạn thắng :3
+                        </p>
+                         
+                        <div className='cta-wrapper'>
+                            <button className='white' 
+                                    onClick={() => { 
+                                        clicked_audio.play(); 
+                                        setShowAboutModal(false) 
+                            }}>Đóng</button>
                         </div>
                     </div>
                 </div>

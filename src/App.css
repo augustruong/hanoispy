@@ -16,35 +16,17 @@ html {
   overflow: auto;
   scroll-snap-type: y proximity !important;
   background-color: #72bcc9;
-
-  /* height: 100vh; */
 }
 .App div {
   scroll-snap-align: start !important;
 }
-.map-container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.map-container {
-  overflow: hidden;
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 /* scrollbar width */
 ::-webkit-scrollbar { width: 0px; }
 
 div {letter-spacing: 0.02em;}
 p { margin: 0; padding: 0; text-align: left; line-height: 180%; letter-spacing: 0.02em; font-size: var(--font-m); }
-
-.title {
-  font-size: 64px;
-}
+.title { font-size: var(--font-xxl); }
 
 .color-green {color: var(--color-green);}
 .color-red {color: var(--color-red);}
@@ -159,121 +141,6 @@ button.about {
   z-index: 1001;
   padding: 0;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.bg.hoguom {
-  background: url('/public/maps/hoguom-mini.png') no-repeat;
-  width: 2320px;
-  height: 1080px;
-}
-.bg.hanoimoi {
-  background: url('/public/maps/hanoimoi.png') no-repeat;
-  width: 2680px;
-  height: 1432px;
-}
-.bg.vuonhoalythaito {
-  background: url('/public/maps/vuonhoalythaito-mini.png') no-repeat;
-  width: 1920px;
-  height: 1240px;
-}
-.bg.nhatuhoalo {
-  background: url('/public/maps/nhatuhoalo.png') no-repeat;
-  width: 2560px;
-  height: 960px;
-}
-.count {
-  position: fixed;
-  top: 20px;
-  left: 90px;
-  font-size: 24px;
-  color: #fff;
-  z-index: 10;
-  background: var(--color-orange);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  align-items: center;
-  text-align: center;
-  z-index: 1001;
-}
-
-#goal {
-  margin-left: -70px;
-  background-color: rgba(250, 235, 215, 0.75);
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  outline: 4px var(--color-off-white) solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.timer {
-  position: fixed;
-  top: 170px;
-  left: 20px;
-  font-size: 24px;
-  width: 100px;
-  height: 40px;
-  background-color: var(--color-white);
-  outline: 2px var(--color-black) solid;
-  text-align: center;
-  border-radius: 10px;
-}
-.timer.alert {
-  color: var(--color-orange);
-  outline: 3px var(--color-orange) solid;
-
-}
-.close {
-  position: fixed;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
-  background-color: rgba(250, 235, 215, 0.5);
-  border-radius: 100%;
-  outline: 3px var(--color-white) solid;
-  cursor: pointer;
-}
-.close:hover {
-  opacity: 1;
-}
-.close:before, .close:after {
-  position: absolute;
-  left: 14px;
-  top: 6px;
-  content: ' ';
-  height: 20px;
-  width: 3px;
-  background-color: var(--color-white);
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
 
 .overlay {
   position: fixed;
@@ -306,7 +173,8 @@ button.about {
 }
 
 .endgame.modal {
-  height: 700px;
+  max-height: 720px;
+  height: 90%;
 }
 
 .top-wrapper {
@@ -322,11 +190,9 @@ button.about {
 .score-report-wrapper {
   width: 50%;
   padding: var(--space-s);
-  /* border: 1px solid var(--color-black); */
   aspect-ratio: 1 / 1;
   text-align: center;
   border-radius: 10px;
-  /* background-color: var(--color-white); */
 }
 .cta-wrapper {
   width: 100%;

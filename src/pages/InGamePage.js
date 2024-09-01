@@ -6,8 +6,11 @@ import { TextStyle } from 'pixi.js';
 import { useDraggable } from "react-use-draggable-scroll";
 import { MapObject } from '../utils/hoguom_coordinate'; 
 import { RandomFacts } from '../utils/random_facts';
-import '../utils/cat_sprite.css';
 import words from '../words';
+
+import './InGamePage.css'
+import '../utils/cat_sprite.css';
+import '../App.css'
 
 export default function InGamePage(props) {
     const [count,setCount] = useState(0)
@@ -65,9 +68,7 @@ export default function InGamePage(props) {
             setCount(30)
             setShowEndGameModal(true);
             congraz_audio.play()
-            // console.log('finish');
         } else {
-            // console.log("debugging", visited);
             setCount(count + 1); 
             let random = (Math.random() * 29).toFixed();
             random = Number(random);
@@ -217,7 +218,7 @@ export default function InGamePage(props) {
                             }
                         </div>
                         <div className='gif-wrapper'>
-                            <img src={process.env.PUBLIC_URL + `/paw-drag.png`}/>
+                            <img src={process.env.PUBLIC_URL + `/gif/paw-drag.gif`}/>
                          </div>   
                         <div className='cta-wrapper'>
                             <button className='yellow' onClick={() => { clicked_audio.play(); setShowManualModal(false); if (props.challenge) {clearTimer(getDeadTime());} }}>OK</button>

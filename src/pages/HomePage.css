@@ -3,3 +3,29 @@
     height: 100vh;
     position: relative;
 }
+.about.modal {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-base);
+}
+.about.modal .gif-wrapper, 
+.about.modal .gif-wrapper img {
+    width: 100%;
+}
+.about.modal .title-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var(--space-base);
+    align-items: flex-end;
+}
+.about.modal .title-wrapper .logo {
+    background-image: url('/public/logo.svg');
+    background-position: center;
+    background-size: contain;
+    width: 52px;
+    height: 52px;
+}
+.about.modal .title-wrapper .title {
+    font-size: 44px;
+}
