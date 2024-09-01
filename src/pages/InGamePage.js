@@ -152,7 +152,7 @@ export default function InGamePage(props) {
     };
     
     return(
-        <div className="map-container" {...events} ref={ref}>
+        <div id='ingame' className="map-container" {...events} ref={ref}>
             {isLoading ? (
                 <div className="loading">
                     <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>

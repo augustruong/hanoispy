@@ -25,7 +25,7 @@ export default function HomePage(){
     }, [])
 
     return(
-        <>
+        <div id="home">
         {isLoading ? (
             <div className="loading">
                 <img src={process.env.PUBLIC_URL + `/spinners/cat-walking.gif`}/>
@@ -94,6 +94,6 @@ export default function HomePage(){
             }
         </>
         )}
-        </>
+        </div>
     )
 }

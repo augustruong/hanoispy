@@ -263,3 +263,10 @@ button.about {
   margin-bottom: var(--space-m);
   font-size: larger;
 }
+
+#unavailable, #unavailable p {
+  text-align: center;
+}
+#unavailable .title {
+  font-size: var(--font-xl);
+}
